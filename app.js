@@ -108,22 +108,126 @@ function d_h11p_2p() {
   return result;
 }
 
-var ballard = {
-  name: pizza-odyssey,
-  times: timeList
-};
+
+var shop1 = document.getElementById('ballard');
+var shop2 = document.getElementById('fistHill');
+var shop3 = document.getElementById('internDist');
+var shop4 = document.getElementById('sLU');
+var shop5 = document.getElementById('georgetown');
+var shop6 = document.getElementById('ravenna');
+
 var timeList =['8am-11am','11am-2pm','2pm-5pm','5pm-8pm','8pm-11pm','11pm-2am'];
-var placeForMyList = document.getElementById('ballard');
-function listify(listedTimes){
-//for loop to iterate thru the arrays
-  for(var i = 0; i < listedTimes.length; i++){
-//build li element
-    var liEl = document.createElement('li');
-    liEl.textContent = listedTimes[i];
+var ballard = {
+  name: 'pizza3001',
+  location: 'Ballard',
+  schedule: function(){
+  //for loop to iterate thru the arrays
+    for(var i = 0; i < timeList.length; i++){
+  //build li element
+      var liEl = document.createElement('li');
+      liEl.textContent = timeList[i];
 
-//put it in the DOM
-    placeForMyList.appendChild(liEl);
+  //put it in the DOM
+      shop1.appendChild(liEl);
+    }
   }
-}
+};
+ballard.schedule();
 
-listify(listTimes);
+var firstHill = {
+  name: 'pizza3001',
+  location: 'First Hill',
+  schedule: function(){
+  //for loop to iterate thru the arrays
+    for(var i = 0; i < timeList.length; i++){
+  //build li element
+      var liEl = document.createElement('li');
+      liEl.textContent = timeList[i];
+
+  //put it in the DOM
+      shop2.appendChild(liEl);
+    }
+  }
+};
+firstHill.schedule();
+
+var internDist = {
+  name: 'pizza3001',
+  location: 'The International District',
+  schedule: function(){
+  //for loop to iterate thru the arrays
+    for(var i = 0; i < timeList.length; i++){
+  //build li element
+      var liEl = document.createElement('li');
+      liEl.textContent = timeList[i];
+
+  //put it in the DOM
+      shop3.appendChild(liEl);
+    }
+  }
+};
+internDist.schedule();
+
+var sLU = {
+  name: 'pizza3001',
+  location: 'South Lake Union',
+  schedule: function(){
+  //for loop to iterate thru the arrays
+    for(var i = 0; i < timeList.length; i++){
+  //build li element
+      var liEl = document.createElement('li');
+      liEl.textContent = timeList[i];
+
+  //put it in the DOM
+      shop4.appendChild(liEl);
+    }
+  }
+};
+sLU.schedule();
+
+var georgetown = {
+  name: 'pizza3001',
+  location: 'Georgetown',
+  schedule: function(){
+  //for loop to iterate thru the arrays
+    for(var i = 0; i < timeList.length; i++){
+  //build li element
+      var liEl = document.createElement('li');
+      liEl.textContent = timeList[i];
+
+  //put it in the DOM
+      shop5.appendChild(liEl);
+    }
+  }
+};
+georgetown.schedule();
+
+var ravenna = {
+  name: 'pizza3001',
+  location: 'Ravenna',
+  schedule: function(){
+  //for loop to iterate thru the arrays
+    for(var i = 0; i < timeList.length; i++){
+  //build li element
+      var liEl = document.createElement('li');
+      liEl.textContent = timeList[i];
+
+  //put it in the DOM
+      shop6.appendChild(liEl);
+    }
+  }
+};
+ravenna.schedule();
+// function listify(listedTimes){
+// //for loop to iterate thru the arrays
+//   for(var i = 0; i < listedTimes.length; i++){
+// //build li element
+//     var liEl = document.createElement('li');
+//     liEl.textContent = listedTimes[i];
+//
+// //put it in the DOM
+//     placeForMyList.appendChild(liEl);
+//   }
+// }
+//
+// listify(shop1.ballard);
