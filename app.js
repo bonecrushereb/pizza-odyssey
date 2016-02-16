@@ -1,8 +1,5 @@
 'use strict'
 
-// var balardList = [];
-// var placeForMyList = document.getElementById('ballard');
-
 //8am-11am pizza/hr
 function p_h8_11() {
   var p8_11min = 0;
@@ -94,7 +91,7 @@ function d_h8_11() {
 }
 
 //11pm-2am pizza/hr
-function p_h11_2(){
+function p_h11p_2p(){
   var p11_2min = 5;
   var p11_2max = 20;
   var result = Math.floor(Math.random() * (p11_2max - p11_2min + 1)) +p11_2min;
@@ -103,7 +100,7 @@ function p_h11_2(){
 }
 
 //11pm-2am delivery/hr
-function d_h11_2() {
+function d_h11p_2p() {
   var d11_2min = 6;
   var d11_2max = 11;
   var result = Math.floor(Math.random() * (d11_2max - d11_2min + 1)) + d11_2min;
@@ -111,16 +108,22 @@ function d_h11_2() {
   return result;
 }
 
-// function listify(stuffToBeListed){
-//  //for loop to iterate thru the array
-//  for(var i = 0; i < stuffToBeListed.length; i++){
-//   //build li element
-//   var liEL = document.createElement('li');
-//   liEL.textContent = stuffToBeListed[i];
-//
-//   //put it in the DOM
-//   placeForMyList.appendChild(liEl);
-//  }
-// }
-//
-// listify(listFodder);
+var ballard = {
+  name: pizza-odyssey,
+  times: timeList
+};
+var timeList =['8am-11am','11am-2pm','2pm-5pm','5pm-8pm','8pm-11pm','11pm-2am'];
+var placeForMyList = document.getElementById('ballard');
+function listify(listedTimes){
+//for loop to iterate thru the arrays
+  for(var i = 0; i < listedTimes.length; i++){
+//build li element
+    var liEl = document.createElement('li');
+    liEl.textContent = listedTimes[i];
+
+//put it in the DOM
+    placeForMyList.appendChild(liEl);
+  }
+}
+
+listify(listTimes);
