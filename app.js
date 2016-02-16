@@ -12,8 +12,8 @@ var timeList =['8:00am','9:00am','10:00am','11:00am','12:00 Noon','1:00pm','2:00
 var ballard = {
   name: 'pizza3001',
   location: 'Ballard',
-  pizza:[],
-  delivery:[],
+  pizza:pizzaProbability,
+  delivery:deliveryProbability,
   schedule: function(){
     //for loop to iterate thru the arrays
     for(var i = 0; i < timeList.length; i++){
@@ -30,8 +30,8 @@ ballard.schedule();
 var firstHill = {
   name: 'pizza3001',
   location: 'First Hill',
-  pizza:
-  delivery:
+  pizza: pizzaProbability,
+  delivery: deliveryProbability,
   schedule: function(){
   //for loop to iterate thru the arrays
     for(var i = 0; i < timeList.length; i++){
@@ -122,14 +122,14 @@ function randomGenerator(min,max) {
 
 
 var pizza = [[0,4],[0,7],[2,15],[15,35],[12,31],[5,20]];
-var delivery = [[0,4],[0,4],[1,4],[3,8],[5,12],[6,11];
-var pizzzProbabillit = [];
-var deliveryProb = [];
+var delivery = [[0,4],[0,4],[1,4],[3,8],[5,12],[6,11]];
+var pizzaProbability = [];
+var deliveryProbability = [];
 
 for (var i = 0; i < pizza.length; i++) {
-  randomGenerator(pizza[i][0],pizza[i][1]);
+  pizzzProbability.push(randomGenerator(pizza[i][0],pizza[i][1]));
 }
 
 for(var i = 0; i < delivery.length; i++){
-  randomGenerator(delivery[i][0],delivery[i][1]);
+  deliveryProbability.push(randomGenerator(delivery[i][0],delivery[i][1]));
 }
