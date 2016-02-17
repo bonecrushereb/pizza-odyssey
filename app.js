@@ -9,29 +9,55 @@ var shop6 = document.getElementById('ravenna');
 
 var timeList =['8:00am','9:00am','10:00am','11:00am','12:00 Noon','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm','9:00pm','10:00pm','11:00pm','12:00 Midnight','2:00am'];
 
-var ballard = {
-  name: 'pizza3001',
-  location: 'Ballard',
-  pizza:pizzaProbability,
-  delivery:deliveryProbability,
-  schedule: function(){
-    //for loop to iterate thru the arrays
-    for(var i = 0; i < timeList.length; i++){
-      //build li element
-      var liEl = document.createElement('li');
-      liEl.textContent = timeList[i];
-      //put it in the DOM
-      shop1.appendChild(liEl);
-    }
-  }
+function PizzaShop(locationName, storeData){
+  this.name = 'pizza3001';
+  this.locationName = locationName;
+  this.storeData = storeData;
 };
-ballard.schedule();
+
+PizzaShop.prototype.calcPizzasPerHr = function(){
+}
+
+PizzaShop.prototype.makeTableRow = function(){
+  var rowOneLabels = ['Time', 'Min Pizza/hr', 'Max Pizza/hr','Min Delivery/hr', 'Max Delivery/hr']
+  var table = document.createElement('table');
+
+  function createTableRow(rowLabels){
+    var row = document.createElement('tr');
+    for(var i = 0; i<rowLabels.length; i++){
+      var column = document.createElement('td');
+      column.textContent = rowLabels[i];
+      row.appendChild(column);
+    }
+    return row;
+  }
+}
+
+//var ballard = new PizzaShop('Ballard',ballardData);
+
+// var ballard = {
+//   name: 'pizza3001'//   location: 'Ballard',
+//   pizza: ,
+//   delivery: ,
+//   schedule: function(){
+//     //for loop to iterate thru the arrays
+//     for(var i = 0; i < timeList.length; i++){
+//       //build li element
+//       var liEl = document.createElement('li');
+//       liEl.textContent = timeList[i];
+//       //put it in the DOM
+//       shop1.appendChild(liEl);
+//     }
+//   }
+// };
+// ballard.schedule();
+// ballard.pizza;
 
 var firstHill = {
   name: 'pizza3001',
   location: 'First Hill',
-  pizza: pizzaProbability,
-  delivery: deliveryProbability,
+  // pizza:
+  // delivery:
   schedule: function(){
   //for loop to iterate thru the arrays
     for(var i = 0; i < timeList.length; i++){
@@ -127,7 +153,7 @@ var pizzaProbability = [];
 var deliveryProbability = [];
 
 for (var i = 0; i < pizza.length; i++) {
-  pizzzProbability.push(randomGenerator(pizza[i][0],pizza[i][1]));
+  pizzaProbability.push(randomGenerator(pizza[i][0],pizza[i][1]));
 }
 
 for(var i = 0; i < delivery.length; i++){
