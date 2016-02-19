@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'know_your_productregular';
+    src: url(fonts/knowYourProduct/know_your_product-webfont.eot);
+    src: url(fonts/knowYourProduct/know_your_product-webfont.eot?#iefix) format(embedded-opentype),
+         url(fonts/knowYourProduct/know_your_product-webfont.woff) format(woff),
+         url(fonts/knowYourProduct/know_your_product-webfont.ttf) format(truetype),
+         url(fonts/knowYourProduct/know_your_product-webfont.svg#know_your_productregular) format(svg);
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 body{
   text-align: center;
   margin: auto;
@@ -5,12 +19,19 @@ body{
 }
 
 img{
+  position: relative;
+  top: 60px;
+  left: 200px;
+  z-index: -1;
   width: 113px;
   height: 67px;
 }
 
 h1{
   font-size: 64px;
+  font-family: 'know_your_productregular', sans-serif;
+  margin-bottom: 20px;
+  z-index: 1;
 }
 
 h2{

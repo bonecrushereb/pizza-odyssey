@@ -9,6 +9,13 @@ var PizzaShop = function(locationName, hourlyPMins, hourlyPMaxs, hourlyDMins, ho
   this.pizzasEachHour = [];
   this.deliverysEachHour = [];
   this.hoursOfOperation = ['8:00am','9:00am','10:00am','11:00am','12:00 Noon','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm','9:00pm','10:00pm','11:00pm','12:00 Midnight','2:00am'];
+  this.totalPizzas = function totalPizzas(){
+    for(var i = 0; i < this.pizzasEachHour.length; i++){
+      totalPizzas += this.pizzasEachHour[i];
+      console.log('The total number of pizzas are ' + this.totalPizzas);
+    }
+    return totalPizzas;
+  }
 }
 
 PizzaShop.prototype.calcHour = function(min,max){
@@ -29,17 +36,11 @@ PizzaShop.prototype.calcdeliverysEachHour = function(){
   }
 }
 
-// function totalPizzas(){
-//   for(var i = 0; i < this.pizzasEachHour.length; i++){
-//     totalPizzas += this.pizzasEachHour[i];
-//     console.log('The total number of pizzas are ' + this.totalPizzas);
-//   }
-//   return totalPizzas;
-// }
+
 
 PizzaShop.prototype.render = function(){
 
-  // totalPizzas();
+  this.totalPizzas();
   this.calcPizzasEachHour();
   this.calcdeliverysEachHour();
 
@@ -91,12 +92,17 @@ PizzaShop.prototype.render = function(){
     tdEl.textContent = this.deliverysEachHour[i];
     trEl.appendChild(tdEl);
 
-    // var tdEl = document.createElement('td');
-    // tdEl.textContent = 'total';
-    // trEl.appendChild(tdEl);
-
     shopTable.appendChild(trEl);
   }
+
+  var trHeader3 = document.createElement('tr');
+
+  var tdEl = document.createElement('td');
+  tdEl.textContent = 'total: ';
+  trHeader3.appendChild(tdEl);
+
+  shopTable.appendChild(trHeader3);
+
   document.body.appendChild(shopTable);
 }
 
