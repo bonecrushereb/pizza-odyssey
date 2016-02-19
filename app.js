@@ -36,11 +36,25 @@ PizzaShop.prototype.calcdeliverysEachHour = function(){
   }
 }
 
+<<<<<<< HEAD
 
 
 PizzaShop.prototype.render = function(){
 
   this.totalPizzas();
+=======
+function totalPizzas(){
+  for(var i = 0; i < this.pizzasEachHour.length; i++){
+    totalPizzas += this.pizzasEachHour[i];
+    console.log('The total number of pizzas are ' + this.totalPizzas);
+  }
+  return totalPizzas;
+}
+
+PizzaShop.prototype.render = function(){
+
+  totalPizzas();
+>>>>>>> 39effb1be9bfb97b41dd4032e09aa942ec0437e3
   this.calcPizzasEachHour();
   this.calcdeliverysEachHour();
 
@@ -98,7 +112,11 @@ PizzaShop.prototype.render = function(){
   var trHeader3 = document.createElement('tr');
 
   var tdEl = document.createElement('td');
+<<<<<<< HEAD
   tdEl.textContent = 'total: ';
+=======
+  tdEl.textContent = 'total: ' + totalPizzas;
+>>>>>>> 39effb1be9bfb97b41dd4032e09aa942ec0437e3
   trHeader3.appendChild(tdEl);
 
   shopTable.appendChild(trHeader3);
