@@ -15,7 +15,8 @@
 body{
   text-align: center;
   margin: auto;
-  background: #161a40;
+  background-image: url(img/background.jpg);
+
 }
 
 img{
@@ -28,6 +29,10 @@ img{
 }
 
 h1{
+  background: -webkit-linear-gradient(top, #384663, #000);
+  background: linear-gradient(top, #384663, #000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 64px;
   font-family: 'know_your_productregular', sans-serif;
   margin-bottom: 20px;
@@ -52,4 +57,13 @@ table{
   left: 40%;
   padding: 5px;
   margin: 10px;
+}
+
+a:link{
+  color: #394663;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #4ca199;
 }
