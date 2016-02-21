@@ -6,16 +6,11 @@ var PizzaShop = function(locationName, hourlyPMins, hourlyPMaxs, hourlyDMins, ho
   this.hourlyPMaxs = hourlyPMaxs;
   this.hourlyDMins = hourlyDMins;
   this.hourlyDMaxs = hourlyDMaxs;
+  // this.totalPizzas = totalPizzas;
   this.pizzasEachHour = [];
   this.deliverysEachHour = [];
   this.hoursOfOperation = ['8:00am','9:00am','10:00am','11:00am','12:00 Noon','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm','9:00pm','10:00pm','11:00pm','12:00 Midnight','2:00am'];
-  this.totalPizzas = function totalPizzas(){
-    for(var i = 0; i < this.pizzasEachHour.length; i++){
-      totalPizzas += this.pizzasEachHour[i];
-      console.log('The total number of pizzas are ' + this.totalPizzas);
-    }
-    return totalPizzas;
-  }
+
 }
 
 PizzaShop.prototype.calcHour = function(min,max){
@@ -36,27 +31,18 @@ PizzaShop.prototype.calcdeliverysEachHour = function(){
   }
 }
 
-<<<<<<< HEAD
-
-
-PizzaShop.prototype.render = function(){
-
-  this.totalPizzas();
-=======
-function totalPizzas(){
-  for(var i = 0; i < this.pizzasEachHour.length; i++){
-    totalPizzas += this.pizzasEachHour[i];
-    console.log('The total number of pizzas are ' + this.totalPizzas);
-  }
-  return totalPizzas;
-}
+// PizzaShop.prototype.calcTotalPizzas = function(){
+//   for(var i = 0; i < this.pizzasEachHour.length; i++){
+//     var total = this.pizzasEachHour[i] + total;
+//     console.log(total);
+//   }
+// }
 
 PizzaShop.prototype.render = function(){
 
-  totalPizzas();
->>>>>>> 39effb1be9bfb97b41dd4032e09aa942ec0437e3
   this.calcPizzasEachHour();
   this.calcdeliverysEachHour();
+  // this.calcTotalPizzas();
 
 
   var shopTable = document.createElement('table');
@@ -112,11 +98,8 @@ PizzaShop.prototype.render = function(){
   var trHeader3 = document.createElement('tr');
 
   var tdEl = document.createElement('td');
-<<<<<<< HEAD
   tdEl.textContent = 'total: ';
-=======
-  tdEl.textContent = 'total: ' + totalPizzas;
->>>>>>> 39effb1be9bfb97b41dd4032e09aa942ec0437e3
+  tdEl.textContent = 'total: ';
   trHeader3.appendChild(tdEl);
 
   shopTable.appendChild(trHeader3);
