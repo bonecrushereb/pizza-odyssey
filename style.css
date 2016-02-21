@@ -19,13 +19,25 @@ body{
 
 }
 
-img{
+.header{
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.header ul li{
+  color: #6992ee;
+}
+
+.logo img{
   position: relative;
   top: 60px;
   left: 200px;
   z-index: -1;
   width: 113px;
   height: 67px;
+}
+
+ul li{
+  list-style-type: none;
 }
 
 h1{
@@ -58,12 +70,34 @@ table{
   padding: 5px;
   margin: 10px;
 }
+.nav ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+  font-size: 18px;
+  margin: 10px;
+}
 
 a:link{
-  color: #394663;
+  color: #6992ee;
   text-decoration: none;
 }
 
 a:hover{
   color: #4ca199;
+}
+
+.image{
+  font-size: 18px;
+}
+
+.hut img{
+  height: 520px;
+  width: 100%;
 }
