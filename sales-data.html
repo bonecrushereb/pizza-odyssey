@@ -2,17 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Pizza Odyssey</title>
+    <title>Pizza Odyssey sales-data</title>
     <link href="style.css" rel="stylesheet" type="css/text">
   </head>
   <body>
-    <img src="img/pizza.png"  alt="pizza image">
+    <div class="logo">
+      <img src="img/pizza.png"  alt="pizza image">
+    </div>
     <h1>Pizza3001</h1>
     <h2>&#45;Management&#45;</h2>
 
 <p>
   <a href="index.html">Main Page</a>
 </p>
+
+    <form id="data-form">
+        <fieldset>
+          <legend>New Shop Submission Form</legend>
+
+          <label for="locationName">Pizza Shop Name: </label>
+          <input name="locationName" type="text">
+
+          <label for="hourlyPMins">Min number of pizzas: </label>
+          <input name="hourlyPMins" type="text">
+
+          <label for="hourlyPMaxs">Max number of pizzas: </label>
+          <input name="hourlyPMaxs" type="text">
+
+          <label for="hourlyDMins"> Min number of deliverys: </label>
+          <input name="hourlyDMins" type="text">
+
+          <label for="hourlyDMaxs">Max number of deliverys:</label>
+          <input name="hourlyDMaxs" type="text">
+
+          <button id="comment-button" type="submit">Create new comment!</button>
+        </fieldset>
+      </form>
     <script src="pizza-data.js"></script>
     <script src = "app.js"></script>
   </body>
