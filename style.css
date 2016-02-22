@@ -36,8 +36,26 @@ body{
 
 .rivet2 img{
   position: relative;
-  top: -5px;
-  right: 5px;
+  top: -65px;
+  left: 450px;
+  margin: 0px;
+  width: 5%;
+  height: 5%;
+}
+
+.rivet3 img{
+  width: 5%;
+  height: 5%;
+  position: relative;
+  top: 90px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rivet4 img{
+  position: relative;
+  top: 25px;
+  left: 450px;
   margin: 0px;
   width: 5%;
   height: 5%;
