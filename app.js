@@ -34,10 +34,10 @@ PizzaShop.prototype.render = function(){
 
   this.calcPizzasEachHour();
   this.calcdeliverysEachHour();
-  // this.calcTotalPizzas();
 
 
   var shopTable = document.createElement('table');
+  shopTable.id = 'table';
 
   var trHeader1 = document.createElement('tr');
 
@@ -84,19 +84,11 @@ PizzaShop.prototype.render = function(){
     tdEl.textContent = this.deliverysEachHour[i];
     trEl.appendChild(tdEl);
 
+
     shopTable.appendChild(trEl);
   }
 
-  var trHeader3 = document.createElement('tr');
-
-  var tdEl = document.createElement('td');
-  tdEl.textContent = 'total: ';
-  tdEl.textContent = 'total: ';
-  trHeader3.appendChild(tdEl);
-
-  shopTable.appendChild(trHeader3);
-
-  document.body.appendChild(shopTable);
+  document.getElementById('store_data').appendChild(shopTable);
 }
 
 var ballard = new PizzaShop('Ballard', ballardPMins, ballardPMaxs, ballardDMins,ballardDMaxs);
