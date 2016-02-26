@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+var shops = [];
 
 var PizzaShop = function(locationName, hourlyPMins, hourlyPMaxs, hourlyDMins, hourlyDMaxs){
   this.locationName = locationName;
@@ -10,25 +11,25 @@ var PizzaShop = function(locationName, hourlyPMins, hourlyPMaxs, hourlyDMins, ho
   this.deliverysEachHour = [];
   this.hoursOfOperation = ['8:00am','9:00am','10:00am','11:00am','12:00 Noon','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','8:00pm','9:00pm','10:00pm','11:00pm','12:00 Midnight','2:00am'];
 
-}
+};
 
 PizzaShop.prototype.calcHour = function(min,max){
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
 PizzaShop.prototype.calcPizzasEachHour = function() {
   for (var i = 0; i < this.hoursOfOperation.length; i++) {
     var soldThisHour = this.calcHour(this.hourlyPMins[i], this.hourlyPMaxs[i]);
     this.pizzasEachHour.push(soldThisHour);
   }
-}
+};
 
 PizzaShop.prototype.calcdeliverysEachHour = function(){
   for(var i = 0; i < this.hoursOfOperation.length; i++){
     var soldThisHour = this.calcHour(this.hourlyDMins[i],this.hourlyDMaxs[i]);
     this.deliverysEachHour.push(soldThisHour);
   }
-}
+};
 
 PizzaShop.prototype.render = function(){
 
@@ -89,7 +90,8 @@ PizzaShop.prototype.render = function(){
   }
 
   document.getElementById('store_data').appendChild(shopTable);
-}
+};
+
 
 var ballard = new PizzaShop('Ballard', ballardPMins, ballardPMaxs, ballardDMins,ballardDMaxs);
 
